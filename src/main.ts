@@ -17,14 +17,14 @@ async function readSwagger(swaggerPath: string) {
   );
 
 
-  console.log(`reading swagger from path ${filePath}`);
+  //console.log(`reading swagger from path ${filePath}`);
   core.debug(`reading swagger from path ${filePath}`);
 
   const fileContents = await readFileAsync(filePath, 'utf8');
   if (!fileContents) {
-    console.log(`failed to read in file contents ${fileContents}`);  
+    //console.log(`failed to read in file contents ${fileContents}`);  
   }
-  console.log(`here are the file contents ${fileContents}`);
+  //console.log(`here are the file contents ${fileContents}`);
   if (/.*\.ya?ml/.test(swaggerPath)) {
     return yaml.load(fileContents);
   } else {
